@@ -1,9 +1,9 @@
-{% Extends 'partials/layout.njk' %}
+{% extends 'partials/layout.njk' %}
 {% block content %}
     Hello Html!!!!!!!!!
     <ul>
-        {% for item in [1,2,3,4,5] %}
-          <li>{{ item }}</li>
+        {% for user in users %}
+          <li>{{ user.name }}</li>
         {% endfor %}
     </ul>
-{% end block %}
+{% endblock %}
