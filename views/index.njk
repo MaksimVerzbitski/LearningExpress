@@ -1,5 +1,8 @@
 {% extends 'partials/layout.njk' %}
 {% block content %}
+    {% if(message) %}
+        <b>{{message}}</b>
+    {% endif %}
     Hello HTML!
     <ul>
         {% for user in users %}
