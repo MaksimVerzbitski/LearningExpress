@@ -11,15 +11,17 @@ datasource db {
 }
 
 model User {
-  @@map("Users")
+  @@map("users")
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
+  shouldLogIn Boolean @default(false)
+  loginToken String? @unique
   posts Post[]
 }
 
 model Post {
-  @@map("Posts")
+  @@map("posts")
   id        Int     @id @default(autoincrement())
   title     String
   content   String?
